@@ -1,8 +1,12 @@
 <h1 align="center">实习面试基础知识</h1>
 
 <p> 
-  <a href="https://github.com/LulietLyan?tab=followers"> <img src="https://img.shields.io/github/followers/LulietLyan?label=Followers&style=plastic" height="25px" alt="github follow" style=for-the-badge/> </a>
+  <a href="https://github.com/LulietLyan?tab=followers"> <img src="https://img.shields.io/github/followers/LulietLyan?label=Followers&style=plastic" height="25px" alt="github follow" > </a>
 </p> 
+
+---
+---
+![Licence](https://img.shields.io/github/license/Ileriayo/markdown-badges?style=for-the-badge)
 
 
 # Content
