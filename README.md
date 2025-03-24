@@ -9,8 +9,8 @@
 ![Licence](https://img.shields.io/github/license/Ileriayo/markdown-badges?style=for-the-badge)
 
 
-# Content
-- [Content](#content)
+# Contents
+- [Contents](#contents)
 - [Computer Network ](#computer-network-)
 - [Operating System ](#operating-system-)
 - [MySQL ](#mysql-)
