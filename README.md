@@ -28,8 +28,8 @@
 
 # MySQL ![MySQL](https://img.shields.io/badge/mysql-4479A1.svg?style=for-the-badge&logo=mysql&logoColor=white)
 
-- **Loading...**
+- [MySQL 面试基础知识](./Database/MySQL/MySQL.md)
 
 # Redis ![Redis](https://img.shields.io/badge/redis-%23DD0031.svg?style=for-the-badge&logo=redis&logoColor=white)
 
-- **Loading...**
+- **Preparing...**
