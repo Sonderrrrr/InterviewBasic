@@ -207,10 +207,10 @@ truncate 只能对 TABLE；delete 可以是 TABLE 和 VIEW。
 - **持久性(durability)**：一旦事务提交，则其所做的修改就会永久保存到数据库中。此时即使系统崩溃，修改的数据也不会丢失
 
 > **实现**
-> **原子性**：通过 undo log来保证
+> **原子性**：通过 undo  log 来保证
 > **一致性**：通过持久性 + 原子性 + 隔离性来保证
 > **隔离性**：通过 MVCC 或锁机制来保证
-> **持久性**：通过 redo log来保证
+> **持久性**：通过 redo  log 来保证
 
 ## 并发事务会出现什么问题？
 
@@ -256,7 +256,7 @@ Read View 有四个重要的字段：
 
 - 如果记录的 trx_id 值小于 Read View 中的 min_trx_id 值，表示这个版本的记录是在创建 Read View 前已经提交的事务生成的，所以该版本的记录对当前事务可见。
 - 如果记录的 trx_id 值大于等于 Read View 中的 max_trx_id 值，表示这个版本的记录是在创建 Read View 后才启动的事务生成的，所以该版本的记录对当前事务不可见。
-- 如果记录的 trx_id 值在 Read View 的min_trx_id和max_trx_id之间，需要判断 trx_id 是否在 m_ids 列表中：
+- 如果记录的 trx_id 值在 Read View 的 min _trx_ id 和 max _trx_ id 之间，需要判断 trx_id 是否在 m_ids 列表中：
   - 如果记录的 trx_id 在 m_ids 列表中，表示生成该版本记录的活跃事务依然活跃着(还没提交事务)，所以该版本的记录对当前事务不可见。
   = 如果记录的 trx_id 不在 m_ids 列表中，表示生成该版本记录的活跃事务已经被提交，所以该版本的记录对当前事务可见
 
@@ -357,7 +357,7 @@ B+ 树和 B 树相比：
 ### 不需要创建索引
 
 - **表记录太少**：表数据太少的时候，不需要创建索引
-- **经常插入、删除、修改的字段**：经常更新的字段不用创建索引，索引字段频繁修改，由于要维护 B+Tree的有序性，那么就需要频繁的重建索引，会影响数据库性能
+- **经常插入、删除、修改的字段**：经常更新的字段不用创建索引，索引字段频繁修改，由于要维护 B+ Tree 的有序性，那么就需要频繁的重建索引，会影响数据库性能
 - **数据重复且分布平均的表字段**：假如一个表有10万行记录，性别只有男和女两种值，且每个值的分布概率大约为50%，那么对这种字段建索引一般不会提高数据库的查询速度。
 - **经常和主字段一块查询但主字段索引值比较多的表字段**
 
@@ -378,12 +378,12 @@ B+ 树和 B 树相比：
 - **联合索引最左前缀原则**
   如果在 (a, b, c) 三个字段上建立联合索引，那么他会自动建立 a| (a,b) | (a,b,c) 组索引。
   - 建立联合索引的时候，区分度最高的字段在最左边
-  - 存在非等号和等号混合判断条件时，在建立索引时，把等号条件的列前置。如 where a>? and b=?，那么即使a 的区分度更高，也必须把 b 放在索引的最前列
+  - 存在非等号和等号混合判断条件时，在建立索引时，把等号条件的列前置。如 where a>? and b=?，那么即使 a  的区分度更高，也必须把 b 放在索引的最前列
   - 最左前缀查询时，并不是指 SQL 语句的 where 顺序要和联合索引一致
 - **不能使用索引中范围条件右边的列(范围列可以用到索引)，范围列之后列的索引全失效**
   - 范围条件有：<、<=、>、>=、between 等
   - 索引最多用于一个范围列，如果查询条件中有两个范围列则无法全用到索引
-  - 假如有联合索引 (empno、title、fromdate)，那么下面的 SQL 中 emp_no 可以用到索引，而title 和 from_date 则使用不到索引
+  - 假如有联合索引 (empno、title、fromdate)，那么下面的 SQL 中 emp_no 可以用到索引，而 title  和 from_date 则使用不到索引
   ```sql
     select * from employees.titles where emp_no < 10010' and title='Senior Engineer'and from_date between '1986-01-01' and '1986-12-31';
   ```
@@ -408,7 +408,7 @@ B+ 树和 B 树相比：
   ```sql
     select uid, login_time from user where login_name=? and passwd=?;
   ```
-- **索引不会包含有 NULL 值的列，IS NULL，IS NOT NULL无法使用索引**
+- **索引不会包含有 NULL 值的列，IS NULL，IS NOT  NULL 无法使用索引**
   - 只要列中包含有 NULL 值都将不会被包含在索引中，复合索引中只要有一列含有 NULL 值，那么这一列对于此复合索引就是无效的。所以在数据库设计时，尽量使用 NOT NULL 约束以及默认值
 - **如果有 order by、group by 的场景，利用索引的有序性**
   - order by 最后的字段是组合索引的一部分，并且放在索引组合顺序的最后，避免出现 file_sort 的情况，影响查询性能
@@ -502,7 +502,7 @@ B+ 树和 B 树相比：
 ### 间隙锁
 
 - **作用**：只存在于可重复读隔离级别，目的是为了解决可重复读隔离级别下幻读的现象。间隙锁之间是兼容的，两个事务可以同时持有包含共同间隙范围的间隙锁，并不存在互斥关系
-- **Next-Key Lock**：Next-Key Lock临键锁，是 Record Lock + Gap Lock 的组合，锁定一个范围，并且锁定记录本身。next-key lock 即能保护该记录，又能阻止其他事务将新纪录插入到被保护记录前面的间隙中
+- **Next-Key Lock**：Next-Key  Lock 临键锁，是 Record Lock + Gap Lock 的组合，锁定一个范围，并且锁定记录本身。next-key lock 即能保护该记录，又能阻止其他事务将新纪录插入到被保护记录前面的间隙中
 - **插入意向锁**：一个事务在插入一条记录的时候，需要判断插入位置是否已被其他事务加了间隙锁(next-key lock 也包含间隙锁)。如果有的话，插入操作就会发生阻塞，直到拥有间隙锁的那个事务提交为止，在此期间会生成一个插入意向锁，表明有事务想在某个区间插入新记录，但是现在处于等待状态
 
 ## MySQL 怎么加锁的？
@@ -552,7 +552,7 @@ B+ 树和 B 树相比：
 
 如果没有特别的需求，使用默认的 InnoDB 即可。
 
-要支持事务选择 InnoDB，如果不需要可以考虑MyISAM；如果表中绝大多数都只是读查询考虑 MyISAM，如果既有读也有写使用 InnoDB 存储引擎。
+要支持事务选择 InnoDB，如果不需要可以考虑 MyISAM ；如果表中绝大多数都只是读查询考虑 MyISAM，如果既有读也有写使用 InnoDB 存储引擎。
 
 系统奔溃后，MyISAM 恢复起来更困难，能否接受系统崩溃的程度；MySQL5.5 版本开始 Innodb 已经成为 MySQL 的默认引擎(之前是 MyISAM)，说明其优势是有目共睹的。
 
@@ -577,7 +577,7 @@ Innodb 存储引擎也通过 ReadView + undo log 实现 MVCC(多版本并发控�
 
 > **UNDO LOG 的作用**
 > **实现事务回滚，保障事务的原子性**：如果出现了错误或者用户执行了 ROLLBACK 语句，可以利用 undo log 中的历史数据将数据恢复到事务开始之前的状态
-> **实现 MVCC关键因素之一**：MVCC 是通过 ReadView + undo log 实现的。undo log 为每条记录保存多份历史数据，在执行快照读的时候，会根据事务的 Read View 里的信息，顺着 undo log 的版本链找到满足其可见性的记录
+> **实现  MVCC 关键因素之一**：MVCC 是通过 ReadView + undo log 实现的。undo log 为每条记录保存多份历史数据，在执行快照读的时候，会根据事务的 Read View 里的信息，顺着 undo log 的版本链找到满足其可见性的记录
 
 ### REDO LOG(重做日志)
 
@@ -586,7 +586,7 @@ edo log 是物理日志，记录了某个数据页做了什么修改，每当执
 redo log 实现了事务中的持久性，主要用于掉电等故障恢复。发生更新的时候，InnoDB 会先更新内存，同时标记为脏页，然后将本次对这个页的修改以 redo log 的形式记录下来。InnoDB 引擎会在适当的时候，由后台线程将缓存在 Buffer Pool 的脏页刷新到磁盘里，实现 WAL 技术。
 
 > **什么是 WAL 技术？**
-> WAL技术指的是 MySQL 的写操作并不是立刻写到磁盘上，而是先写日志，然后在合适的时间再写到磁盘上
+>  WAL 技术指的是 MySQL 的写操作并不是立刻写到磁盘上，而是先写日志，然后在合适的时间再写到磁盘上
 >
 > **什么是 crash-safe？**
 > redo log + WAL 技术，InnoDB 就可以保证即使数据库发生异常重启，之前已提交的记录都不会丢失
@@ -601,7 +601,7 @@ Server 层生成的日志，主要用于数据备份和主从复制。
 
 - **适用对象不同**：binlog 是 MySQL 的 Server 层实现的，所有存储引擎都可以使用；redo log 是 Innodb 存储引擎实现的日志
 - **文件格式不同**：redo log 是物理日志，记录的是在某个数据页做了什么修改，比如对 XXX 表空间中的 YYY 数据页 ZZZ 偏移量的地方做了 AAA 更新
-- **写入方式不同**：binlog 是追加写，写满一个文件，就创建一个新的文件继续写，不会覆盖以前的日志，保存的是全量的日志。redo log是循环写，日志空间大小是固定，全部写满就从头开始，保存未被刷入磁盘的脏页日志
+- **写入方式不同**：binlog 是追加写，写满一个文件，就创建一个新的文件继续写，不会覆盖以前的日志，保存的是全量的日志。redo  log 是循环写，日志空间大小是固定，全部写满就从头开始，保存未被刷入磁盘的脏页日志
 - **用途不同**：binlog 用于备份恢复、主从复制；redo log 用于掉电等故障恢复
 
 ## redo log 和 undo log 区别？
@@ -619,7 +619,7 @@ redo log 记录了此次事务完成后的数据状态，undo log 记录了此�
 
 ## 为什么有了 binlog，还要有 redo log？
 
-早期版本 MySQL 里没有 InnoDB 引擎，MySQL 自带的 MyISAM引擎没有 crash-safe 的能力，binlog 日志只能用于归档。InnoDB 是另一个公司以插件形式引入 MySQL 的，所以 InnoDB 使用 redo log 来实现 crash-safe 能力。
+早期版本 MySQL 里没有 InnoDB 引擎，MySQL 自带的  MyISAM 引擎没有 crash-safe 的能力，binlog 日志只能用于归档。InnoDB 是另一个公司以插件形式引入 MySQL 的，所以 InnoDB 使用 redo log 来实现 crash-safe 能力。
 
 ## 被修改 Undo 页面，需要记录对应 redo log 吗？
 
@@ -671,7 +671,7 @@ write pos 追上了 checkpoint，说明 redo log 文件满了， MySQL 会被阻
 
 ## binlog 什么时候刷盘频率？
 
-MySQL提供一个 sync_binlog 参数来控制数据库的 binlog 刷到磁盘上的频率：
+ MySQL 提供一个 sync_binlog 参数来控制数据库的 binlog 刷到磁盘上的频率：
 
 - **sync_binlog = 0 时**：表示每次提交事务都只 write，不 fsync，后续交由操作系统决定何时将数据持久化到磁盘
 - **sync_binlog = 1 时**：表示每次提交事务都会 write，然后马上执行 fsync
@@ -685,7 +685,7 @@ MySQL提供一个 sync_binlog 参数来控制数据库的 binlog 刷到磁盘上
 
 ## 主从复制是怎么实现？
 
-binlog记录 MySQL 上的所有变化并以二进制形式保存在磁盘上。复制的过程就是将 binlog 中的数据从主库传输到从库上。
+ binlog 记录 MySQL 上的所有变化并以二进制形式保存在磁盘上。复制的过程就是将 binlog 中的数据从主库传输到从库上。
 
 - 主库在收到提交事务的请求之后会先写入 binlog，再提交事务，更新存储引擎中的数据，事务提交完成后，返回“操作成功”的响应
 - 从库会创建一个专门的 I/O 线程，连接主库的 log dump 线程，来接收主库的 binlog 日志，再把 binlog 信息写入 relay log 的中继日志里，再返回给主库“复制成功”的响应
@@ -714,10 +714,10 @@ binlog记录 MySQL 上的所有变化并以二进制形式保存在磁盘上。�
 
 当客户端执行 commit 语句或者在自动提交的情况下，MySQL 内部开启一个 XA 事务，分两阶段来完成 XA 事务的提交。
 
-事务的提交过程有两个阶段，将 redo log 的写入拆成了两个步骤：prepare 和 commit，中间再穿插写入binlog：
+事务的提交过程有两个阶段，将 redo log 的写入拆成了两个步骤：prepare 和 commit，中间再穿插写入 binlog ：
 
-- **prepare 阶段**：将 内部 XA 事务的 ID写入到 redo log，同时将 redo log 对应的事务状态设置为 prepare，然后将 redo log 持久化到磁盘。
-- **commit 阶段**：把 内部 XA 事务的 ID写入到 binlog，然后将 binlog 持久化到磁盘，接着调用引擎的提交事务接口，将 redo log 状态设置为 commit，此时该状态并不需要持久化到磁盘，只需要 write 到文件系统的 page cache 成功，只要 binlog 写磁盘成功，redo log 的状态还是 prepare 也没有关系，一样会被认为事务已经执行成功
+- **prepare 阶段**：将 内部 XA 事务的  ID 写入到 redo log，同时将 redo log 对应的事务状态设置为 prepare，然后将 redo log 持久化到磁盘。
+- **commit 阶段**：把 内部 XA 事务的  ID 写入到 binlog，然后将 binlog 持久化到磁盘，接着调用引擎的提交事务接口，将 redo log 状态设置为 commit，此时该状态并不需要持久化到磁盘，只需要 write 到文件系统的 page cache 成功，只要 binlog 写磁盘成功，redo log 的状态还是 prepare 也没有关系，一样会被认为事务已经执行成功
 
 ## 异常重启会出现什么现象？
 

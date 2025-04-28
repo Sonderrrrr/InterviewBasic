@@ -263,7 +263,7 @@ Docker 利用现有的 **Linux 容器技术**，以不同方式将其封装及�
 - `docker rmi`：删除镜像的命令
 - `[OPTIONS]`：可选参数，用于配置删除过程，如强制删除等
 - `CONTAINER [CONTAINER...]`：要删除的容器名称或 ID
-- `IMAGE [IMAGE...]`：要删除的镜像名称或ID
+- `IMAGE [IMAGE...]`：要删除的镜像名称或 ID 
 
 ### 12\. Docker exec
 
@@ -312,7 +312,7 @@ Docker 利用现有的 **Linux 容器技术**，以不同方式将其封装及�
 
 - `docker cp`：复制文件或目录的命令
 - `[OPTIONS]`：可选参数，用于配置复制过程，如权限等
-- `CONTAINER:SRC_PATH`：源路径，其中`CONTAINER`是容器名称或ID
+- `CONTAINER:SRC_PATH`：源路径，其中`CONTAINER`是容器名称或 ID 
 - `DEST_PATH`：目标路径，其中`DEST_PATH`是主机路径
 - `SRC_PATH|-`：源路径，其中`-`表示从标准输入读取
 
