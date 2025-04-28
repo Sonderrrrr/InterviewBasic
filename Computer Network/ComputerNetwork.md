@@ -342,7 +342,7 @@ XSS 是指**恶意攻击者利用网站没有对用户提交数据进行转义�
 ### 防范
 
 漏洞产生的根本原因是**太相信用户提交的数据，对用户所提交的数据过滤不足**。解决方案也应该从这个方面入手：
-- **将重要的 cookie 标记为 http only**：Javascript 中的 document.cookie 语句就不能获取到 cookie 了(如果在 cookie 中设置了 HttpOnly 属性，那么通过 js 脚本将无法读取到 cookie 信息，这样能有效的防止XSS攻击)
+- **将重要的 cookie 标记为 http only**：Javascript 中的 document.cookie 语句就不能获取到 cookie 了(如果在 cookie 中设置了 HttpOnly 属性，那么通过 js 脚本将无法读取到 cookie 信息，这样能有效的防止 XSS 攻击)
 - **表单数据规定值的类型**：例如：年龄应为只能为int、name只能为字母数字组合
 - **对数据进行 HTML 编码处理**
 - **过滤或移除特殊的 HTML 标签**：例如:
@@ -655,7 +655,7 @@ TCP 存在保活计时器，如果客户端故障，服务器不会一直等待�
 
 ## TCP 的 keepalive 和 HTTP 的 keepalive 的区别？
 
-- **HTTP 的 Keep-Alive 是由应用层(用户态)实现的**，称为 HTTP 长连接；**TCP 的 Keepalive，是由TCP层(内核态)实现的**，称为 TCP 保活机制
+- **HTTP 的 Keep-Alive 是由应用层(用户态)实现的**，称为 HTTP 长连接；**TCP 的 Keepalive，是由 TCP 层(内核态)实现的**，称为 TCP 保活机制
 - **HTTP Keep-Alive 是指使用同一个 TCP 连接来发送和接收多个 HTTP 请求/应答**，好处是避免了连接建立和释放的开销，只要任意一端没有明确提出断开连接，就保持 TCP 连接状态；**TCP Keepalive 是指建立 TCP 连接的两端一直没有数据交互达到触发 TCP 保活机制的条件，内核里的 TCP 协议栈就会发送探测报文，如果对端程序正常工作，收到探测报文之后就会回复响应，同时保活时间重置，如果对端主机崩溃没有响应或者网络原因报文不可达，连续几次探测报文之后 TCP 会报告该 TCP 连接已经死亡**
 - web 服务软件一般都会提供 keepalive_timeout 参数来指定 HTTP 长连接的超时时间。例如设置了 HTTP 长连接的超时时间是 60 秒，web 服务软件就会启动一个定时器，如果客户端在完成一个 HTTP 请求后，在 60 秒内都没有再发起新的请求，定时器的时间一到，就会触发回调函数来释放该连接
 
