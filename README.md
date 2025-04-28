@@ -13,7 +13,7 @@
 </p> 
 
 <p align="center"> 
-<a href="https://github.com/LulietLyan/InterviewBasic"><img src="./Figures/README/SYSU.png" height=50pt alt="lulietlyan" /></a>
+<a href="https://github.com/LulietLyan/InterviewBasic"><img src="./Figures/README/SYSU.svg" height=50pt alt="lulietlyan" /></a>
 <a href="https://github.com/LulietLyan/InterviewBasic"><img src="./Figures/README/NSCC-GZ.svg" height=50pt alt="lulietlyan" /></a>
  </p>
 
