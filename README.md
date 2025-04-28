@@ -2,7 +2,7 @@
 
 <div id="user-content-toc">
   <ul align="center">
-    <summary><h1 style="display: inline-block"><b>实习面试基础知识</b></h1></summary>
+    <summary><h1 style="display: inline-block"><b>InterviewBasic: All You Need for Landing an Internship</b></h1></summary>
   </ul>
 </div>
 
