@@ -29,6 +29,7 @@
 - [Redis ](#redis-)
 - [Docker ](#docker-)
 - [GO 项目实战 ](#go-项目实战-)
+- [🤝 代码贡献](#-代码贡献)
 
 
 # Computer Network ![Socket.io](https://img.shields.io/badge/Socket.io-black?style=for-the-badge&logo=socket.io&badgeColor=010101)
@@ -57,5 +58,13 @@
 
 - **Preparing...**
 
+# 🤝 代码贡献
+
+诚挚邀请志同道合的朋友们为本仓库贡献更多内容！若您希望贡献资料：
+1. **Fork** 本仓库
+2. 在本地拉取您 Fork 的仓库
+3. **本地创建新的分支**并进行修改
+4. 将修改后的项目**推送**到您 Fork 的仓库中
+5. **Pull Request** 至本仓库等待合并
 
 <img src="./Figures/README/line-neon.gif" width=100%><br><br>
