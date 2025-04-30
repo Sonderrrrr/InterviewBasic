@@ -7,9 +7,24 @@
 </div>
 
 <p align="center"> 
-  <a href="https://github.com/LulietLyan?tab=followers"> <img src="https://img.shields.io/github/followers/LulietLyan?label=Followers&style=for-the-badge&color=purple" height="25px" alt="github follow" > </a>
-  <a href="https://github.com/LulietLyan/InterviewBasic?tab=stars"> <img src="https://img.shields.io/github/stars/LulietLyan/InterviewBasic?label=Stars&style=for-the-badge" height="25px" alt="github repo stars" > </a>
-  <a href="https://github.com/LulietLyan/InterviewBasic"> <img src="https://img.shields.io/github/license/Ileriayo/markdown-badges?style=for-the-badge" height="25px" alt="github repo stars" > </a>
+  <img src="https://img.shields.io/github/followers/LulietLyan?label=Followers&style=for-the-badge&color=purple"
+  alt="github follow" >
+  <img src="https://img.shields.io/github/stars/LulietLyan/InterviewBasic?label=Stars&style=for-the-badge"
+  alt="github repo stars" >
+  <img src="https://img.shields.io/github/contributors/LulietLyan/README-Template?style=for-the-badge&logoColor=%23985684"
+  alt="contributors" >
+  <img src="https://img.shields.io/github/issues-pr/LulietLyan/README-Template?style=for-the-badge&color=%23985684"
+  alt="issues-pr" >
+  <img src="https://img.shields.io/github/issues/LulietLyan/README-Template?style=for-the-badge&color=%23777777" 
+  alt="issues" >
+  <img src="https://img.shields.io/github/forks/LulietLyan/README-Template?style=for-the-badge&color=%23187777" 
+  alt="forks" >
+  <img src="https://img.shields.io/badge/Contributions-Welcome-%23028745?style=for-the-badge&labelColor=%23b08f42"
+  alt="contribution"/>
+  <img src="https://img.shields.io/badge/Star-IfYouLike-%23067897?style=for-the-badge&labelColor=%23879078"
+  alt="star"/>
+  <img src="https://img.shields.io/github/license/Ileriayo/markdown-badges?style=for-the-badge"
+  alt="license" >
 </p> 
 
 <p align="center"> 
