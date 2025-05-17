@@ -2,14 +2,14 @@
 
 <div id="user-content-toc">
   <ul align="center">
-    <summary><h1 style="display: inline-block"><b>InterviewBasic: All You Need for Landing an Internship</b></h1></summary>
+    <summary><h1 style="display: inline-block"><b>Internship-Basic: All You Need for Landing an Internship</b></h1></summary>
   </ul>
 </div>
 
 <p align="center"> 
   <img src="https://img.shields.io/github/followers/LulietLyan?label=Followers&style=for-the-badge&color=purple"
   alt="github follow" >
-  <img src="https://img.shields.io/github/stars/LulietLyan/InterviewBasic?label=Stars&style=for-the-badge"
+  <img src="https://img.shields.io/github/stars/LulietLyan/Internship-Basic?label=Stars&style=for-the-badge"
   alt="github repo stars" >
   <img src="https://img.shields.io/github/contributors/LulietLyan/README-Template?style=for-the-badge&logoColor=%23985684"
   alt="contributors" >
@@ -28,8 +28,8 @@
 </p> 
 
 <p align="center"> 
-<a href="https://github.com/LulietLyan/InterviewBasic"><img src="./Figures/README/SYSU.svg" height=50pt alt="lulietlyan" /></a>
-<a href="https://github.com/LulietLyan/InterviewBasic"><img src="./Figures/README/NSCC-GZ.svg" height=50pt alt="lulietlyan" /></a>
+<a href="https://github.com/LulietLyan/Internship-Basic"><img src="./Figures/README/SYSU.svg" height=50pt alt="lulietlyan" /></a>
+<a href="https://github.com/LulietLyan/Internship-Basic"><img src="./Figures/README/NSCC-GZ.svg" height=50pt alt="lulietlyan" /></a>
  </p>
 
 <img src="./Figures/README/line-neon.gif" width=100%><br><br>
