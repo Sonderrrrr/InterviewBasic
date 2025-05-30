@@ -34,7 +34,8 @@
 
 <img src="https://raw.githubusercontent.com/LulietLyan/Internship-Basic/refs/heads/main/docs/Figures/README/line-neon.gif" width=100%>
 
-**本项目提供 CS 类学科实习所需各类基础知识及相关工具介绍，持续更新中。无论是知识更新还是格式问题都欢迎大家 PR！**
+!!! 🌟 博学 审问 慎思 明辨 笃行
+  我们致力于提供一份尽可能简洁高效的计算机基础知识资料库，照耀后来者的道路
 
 # Contents
 - [Contents](#contents)
