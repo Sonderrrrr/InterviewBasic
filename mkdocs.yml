@@ -53,14 +53,16 @@ extra:
 
 nav:
   - Home Page: index.md
-  - 计算机网络: 
+  - Computer Network: 
     - ./Computer Network/ComputerNetwork.md
-  - 操作系统: 
+  - Operating System: 
     - ./Operating System/OperatingSystem.md
   # - 数据结构:
-  - 数据库: 
+  - Database: 
     - MySQL: ./Database/MySQL/MySQL.md
     - Redis: ./Database/Redis/Redis.md
+  - Docker:
+    - ./Docker/Docker.md
 
 markdown_extensions:
   - abbr
