@@ -53,8 +53,10 @@ extra:
 
 nav:
   - Home Page: index.md
-  - 计算机网络: ./Computer Network/ComputerNetwork.md
-  - 操作系统: ./Operating System/OperatingSystem.md
+  - 计算机网络: 
+    - ./Computer Network/ComputerNetwork.md
+  - 操作系统: 
+    - ./Operating System/OperatingSystem.md
   # - 数据结构:
   - 数据库: 
     - MySQL: ./Database/MySQL/MySQL.md
