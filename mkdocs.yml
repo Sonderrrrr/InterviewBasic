@@ -61,7 +61,7 @@ extra:
   social: # icons
     - icon: fontawesome/brands/github
       link: https://github.com/LulietLyan/
-      name: GitHub | LulietLyan
+      name: GitHub | SYSU-CS-Basic
 
 nav:
   - Home Page: index.md
