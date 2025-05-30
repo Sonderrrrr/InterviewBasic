@@ -34,8 +34,11 @@
 
 <img src="https://raw.githubusercontent.com/LulietLyan/Internship-Basic/refs/heads/main/docs/Figures/README/line-neon.gif" width=100%>
 
-!!! **🌟「博学 审问 慎思 明辨 笃行」**
-  我们致力于提供一份尽可能简洁高效的计算机基础知识资料库，照耀后来者的道路
+
+<div class="admonition abstract">
+  <p class="admonition-title">「博学 审问 慎思 明辨 笃行」</p>
+  <p> 我们致力于构建简洁高效的计算机基础知识库，为后来者点亮征途。</p>
+</div>
 
 # Contents
 - [Contents](#contents)
