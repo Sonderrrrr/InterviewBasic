@@ -2,7 +2,8 @@ site_name: SYSU-CS-Basic
 site_description: 博学 审问 慎思 明辨 笃行
 site_url: https://lulietlyan.github.io/Internship-Basic
 repo_url: https://github.com/LulietLyan/Internship-Basic
-edit_uri: edit/main/docs/ # 编辑按钮的url
+# repo_name: SYSU-CS-Basic      # 右上角的名字
+edit_uri: edit/main/docs/     # 编辑按钮的url
 
 extra_css:
   - stylesheets/basic.css
@@ -16,16 +17,35 @@ theme:
   #   text: Source Sans Pro
   #   code: Source Code Pro
   features: 
+    - navigation.tabs.sticky
+    - navigation.sections
+    - navigation.expand
+    - navigation.path
     - navigation.instant
     - navigation.tracking
-    - navigation.tabs # 使用Tab来进行分类
-    - navigation.top # 返回顶部的按钮 在上滑时出现
-    - navigation.indexes # Tab会有一个index.md 而不是在打开Tab时打开第一篇文章
-    - search.suggest # 搜索输入一些字母时推荐补全整个单词
-    - search.highlight # 搜索出的文章关键词加入高亮
-  language: zh # 一些提示性的文字会变成中文
+    - navigation.tabs       # 使用 Tab 来进行分类
+    - navigation.top        # 返回顶部的按钮 在上滑时出现
+    - navigation.indexes    # Tab 会有一个 index.md 而不是在打开 Tab 时打开第一篇文章
+    - search.suggest        # 搜索输入一些字母时推荐补全整个单词
+    - search.highlight      # 搜索出的文章关键词加入高亮
+    - search.share
+    - content.action.edit # 编辑此页
+    - content.action.view # 查看源码
+    - content.code.copy
+    - content.code.annotate
+    - content.code.select
+    - content.tooltips
+    - content.footnote.tooltips
+    - content.tabs.link
+    - toc.follow    
+    - header.autohide
+  language: zh              # 一些提示性的文字会变成中文
   icon:
+    logo: material/leaf
     repo: fontawesome/brands/github
+    previous: fontawesome/solid/angle-left
+    # top: fontawesome/solid/angles-up
+    alternate: fontawesome/solid/language
     admonition:
       note: octicons/tag-16
       abstract: octicons/checklist-16
@@ -66,6 +86,65 @@ extra:
     - icon: material/email
       link: mailto:<lulietlyan@gmail.com>
       name: Email | LulietLyan
+
+markdown_extensions:
+  - abbr
+  - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - md_in_html
+  - meta
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+  - pymdownx.pathconverter:
+      base_path: 'docs/pdf_files' # 设置基础路径为你的 PDF 文件所在目录
+      absolute: false # 将路径转换为绝对路径
+      tags: 'a script img link object embed' # 需要转换路径的 HTML 标签 
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tabbed:
+      alternate_style: true
+  - sane_lists
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  - pymdownx.critic
+  - pymdownx.details
+  - pymdownx.highlight: # 代码块高亮
+      anchor_linenums: true
+      linenums: true # 显示行号
+      auto_title: true # 显示编程语言名称
+      linenums_style: pymdownx-inline
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.magiclink
+  - pymdownx.tilde
+  - pymdownx.snippets
+  - pymdownx.superfences: 
+      custom_fences: 
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:mermaid2.fence_mermaid_custom
+  - toc: 
+      permalink: true
+  - tables
+
+validation:
+  nav:
+    omitted_files: info
+    not_found: warn
+    absolute_links: info
+  links:
+    not_found: ignore
+    absolute_links: ignore
+    unrecognized_links: ignore
 
 nav:
   - Home Page: index.md
@@ -122,53 +201,53 @@ nav:
 #       custom_checkbox: true
 #   - meta
 
-markdown_extensions:
-  - abbr
-  - meta
-  - def_list
-  - attr_list
-  - admonition
-  - footnotes
-  - md_in_html
-  - sane_lists
-  - admonition
-  - pymdownx.keys
-  - pymdownx.mark
-  - pymdownx.tilde
-  # - pymdownx.caret
-  - pymdownx.critic
-  # - pymdownx.betterem
-  - pymdownx.details
-  - pymdownx.snippets
-  - pymdownx.magiclink
-  - pymdownx.smartsymbols
-  - pymdownx.superfences
-  - pymdownx.inlinehilite
-  - markdown.extensions.attr_list
-  - toc:
-      permalink: true
-      slugify: !!python/object/apply:pymdownx.slugs.slugify
-        kwds:
-          case: lower
-      toc_depth: 4  # 将深度从 4 改为 2
-  - pymdownx.superfences:
-      custom_fences:
-        - name: mermaid
-          class: mermaid
-          format: !!python/name:pymdownx.superfences.fence_code_format
-  - pymdownx.highlight: # 代码块高亮
-      anchor_linenums: true
-      # linenums: true # 显示行号
-      # auto_title: true # 显示编程语言名称
-      linenums_style: pymdownx-inline
-      line_spans: __span
-      pygments_lang_class: true
-  - pymdownx.emoji:
-      emoji_index: !!python/name:material.extensions.emoji.twemoji
-      emoji_generator: !!python/name:material.extensions.emoji.to_svg
-  - pymdownx.tabbed:
-      alternate_style: true
-  - pymdownx.tasklist:
-      custom_checkbox: true
-  - pymdownx.arithmatex:
-      generic: true
+# markdown_extensions:
+#   - abbr
+#   - meta
+#   - def_list
+#   - attr_list
+#   - admonition
+#   - footnotes
+#   - md_in_html
+#   - sane_lists
+#   - admonition
+#   - pymdownx.keys
+#   - pymdownx.mark
+#   - pymdownx.tilde
+#   # - pymdownx.caret
+#   - pymdownx.critic
+#   # - pymdownx.betterem
+#   - pymdownx.details
+#   - pymdownx.snippets
+#   - pymdownx.magiclink
+#   - pymdownx.smartsymbols
+#   - pymdownx.superfences
+#   - pymdownx.inlinehilite
+#   - markdown.extensions.attr_list
+#   - toc:
+#       permalink: true
+#       slugify: !!python/object/apply:pymdownx.slugs.slugify
+#         kwds:
+#           case: lower
+#       toc_depth: 4  # 将深度从 4 改为 2
+#   - pymdownx.superfences:
+#       custom_fences:
+#         - name: mermaid
+#           class: mermaid
+#           format: !!python/name:pymdownx.superfences.fence_code_format
+#   - pymdownx.highlight: # 代码块高亮
+#       anchor_linenums: true
+#       # linenums: true # 显示行号
+#       # auto_title: true # 显示编程语言名称
+#       linenums_style: pymdownx-inline
+#       line_spans: __span
+#       pygments_lang_class: true
+#   - pymdownx.emoji:
+#       emoji_index: !!python/name:material.extensions.emoji.twemoji
+#       emoji_generator: !!python/name:material.extensions.emoji.to_svg
+#   - pymdownx.tabbed:
+#       alternate_style: true
+#   - pymdownx.tasklist:
+#       custom_checkbox: true
+#   - pymdownx.arithmatex:
+#       generic: true
