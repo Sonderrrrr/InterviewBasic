@@ -51,8 +51,14 @@ extra:
       link: https://github.com/LulietLyan/
       name: GitHub | LulietLyan
 
-  nav:
-  - Home: index.md
+nav:
+  - Home Page: index.md
+  - 计算机网络: ./Computer Network/ComputerNetwork.md
+  - 操作系统: ./Operating System/OperatingSystem.md
+  # - 数据结构:
+  - 数据库: 
+    - MySQL: ./Database/MySQL/MySQL.md
+    - Redis: ./Database/Redis/Redis.md
 
 markdown_extensions:
   - abbr
