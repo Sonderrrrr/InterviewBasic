@@ -1,0 +1,97 @@
+site_name: SYSU-Internship-Basic
+site_description: 博学 审问 慎思 明辨 笃行
+site_url: https://charleschile.github.io/
+repo_url: https://lulietlyan.github.io/Internship-Basic
+edit_uri: edit/main/docs/ # 编辑按钮的url
+
+extra_css:
+  - stylesheets/basic.css
+  - stylesheets/admonition.css
+  - https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.css
+
+theme:
+  name: material
+  # font:
+  #   text: Source Sans Pro
+  #   code: Source Code Pro
+  features: 
+    - navigation.instant
+    - navigation.tracking
+    - navigation.tabs # 使用Tab来进行分类
+    - navigation.top # 返回顶部的按钮 在上滑时出现
+    - navigation.indexes # Tab会有一个index.md 而不是在打开Tab时打开第一篇文章
+    - search.suggest # 搜索输入一些字母时推荐补全整个单词
+    - search.highlight # 搜索出的文章关键词加入高亮
+  language: zh # 一些提示性的文字会变成中文
+  icon:
+    repo: fontawesome/brands/github
+
+
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default # 日间模式
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to dark mode
+      primary: white
+      accent: pink
+
+    # Palette toggle for dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      toggle:
+        icon: material/weather-night
+        name: Switch to light mode
+      primary: blue grey
+      accent: pink
+
+extra:
+  social: # icons
+    - icon: fontawesome/brands/github
+      link: https://github.com/LulietLyan/
+      name: GitHub | LulietLyan
+
+  nav:
+  - Home: index.md
+
+markdown_extensions:
+  - abbr
+  - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - md_in_html
+  - toc:
+      permalink: true
+      title: Content
+  - tables
+  - pymdownx.snippets:
+      auto_append:
+        - includes/abbr.md
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.betterem
+  - pymdownx.caret
+  - pymdownx.mark
+  - pymdownx.tilde
+  - pymdownx.critic:
+      mode: view
+  - pymdownx.details
+  - pymdownx.emoji:
+      # emoji_index: !!python/name:material.extensions.emoji.twemoji
+      # emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.highlight:
+      # linenums: true
+  - pymdownx.superfences:
+      custom_fences:
+          - name: mermaid
+            class: mermaid
+            format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.smartsymbols
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - meta
