@@ -99,9 +99,9 @@ markdown_extensions:
       emoji_index: !!python/name:materialx.emoji.twemoji
       emoji_generator: !!python/name:materialx.emoji.to_svg
   - pymdownx.pathconverter:
-      base_path: 'docs/pdf_files' # 设置基础路径为你的 PDF 文件所在目录
-      absolute: false # 将路径转换为绝对路径
-      tags: 'a script img link object embed' # 需要转换路径的 HTML 标签 
+      base_path: 'docs/Figures'               # 设置基础路径为你的 PDF 文件所在目录
+      absolute: false                         # 将路径转换为绝对路径
+      tags: 'a script img link object embed'  # 需要转换路径的 HTML 标签 
   - pymdownx.tasklist:
       custom_checkbox: true
   - pymdownx.tabbed:
