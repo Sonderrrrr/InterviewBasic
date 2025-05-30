@@ -62,7 +62,10 @@ extra:
   social: # icons
     - icon: fontawesome/brands/github
       link: https://github.com/LulietLyan/
-      name: GitHub | SYSU-CS-Basic
+      name: GitHub | LulietLyan
+    - icon: material/email
+      link: mailto:<lulietlyan@gmail.com>
+      name: Email | LulietLyan
 
 nav:
   - Home Page: index.md
@@ -120,12 +123,12 @@ nav:
 #   - meta
 
 markdown_extensions:
-  # - abbr
+  - abbr
   - meta
   - def_list
   - attr_list
-  # - admonition
-  # - footnotes
+  - admonition
+  - footnotes
   - md_in_html
   - sane_lists
   - admonition
@@ -141,7 +144,7 @@ markdown_extensions:
   - pymdownx.smartsymbols
   - pymdownx.superfences
   - pymdownx.inlinehilite
-  # - markdown.extensions.attr_list
+  - markdown.extensions.attr_list
   - toc:
       permalink: true
       slugify: !!python/object/apply:pymdownx.slugs.slugify
