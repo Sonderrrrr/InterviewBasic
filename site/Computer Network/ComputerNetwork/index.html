@@ -1368,7 +1368,7 @@
 <ul>
 <li>登录受信任网站 A，并在本地生成 Cookie(如果用户没有登录网站 A，那么网站 B 在诱导的时候，请求网站 A 的 api 接口时，会提示你登录)</li>
 <li>在不登出 A 的情况下，访问危险网站 B(其实是利用了网站 A 的漏洞)</li>
-<li><img alt="CSRF 攻击" src="../Figures/Computer%20Network/CSRF攻击.jpg" /></li>
+<li><img alt="CSRF 攻击" src="../../Figures/Computer%20Network/CSRF%E6%94%BB%E5%87%BB.jpg" /></li>
 </ul>
 <h3 id="_16">防范<a class="headerlink" href="#_16" title="Permanent link">&para;</a></h3>
 <ul>
@@ -1379,7 +1379,7 @@
 <h2 id="_17">中间人攻击以及如何防范？<a class="headerlink" href="#_17" title="Permanent link">&para;</a></h2>
 <h3 id="_18">概念<a class="headerlink" href="#_18" title="Permanent link">&para;</a></h3>
 <p>指攻击者与通讯的两端分别创建独立的联系，并交换其所收到的数据，使通讯的两端认为他们正在通过一个私密的连接与对方直接对话，但事实上整个会话都被攻击者完全控制。
-<img alt="中间人攻击" src="../Figures/Computer%20Network/中间人攻击.png" /></p>
+<img alt="中间人攻击" src="../../Figures/Computer%20Network/%E4%B8%AD%E9%97%B4%E4%BA%BA%E6%94%BB%E5%87%BB.png" /></p>
 <ul>
 <li><strong>嗅探</strong>：嗅探或数据包嗅探 是一种用于捕获流进和流出系统/网络的数据包的技术。网络中的数据包嗅探就好像电话中的监听</li>
 <li><strong>数据包注入</strong>：攻击者会将恶意数据包注入常规数据中。这样用户便不会注意到文件/恶意软件，因为它们是合法通讯流的一部分。在中间人攻击和拒绝式攻击中，这些文件是很常见的</li>
@@ -1432,7 +1432,7 @@
 </ul>
 <h1 id="tcp-udp">🔴 TCP 和 UDP<a class="headerlink" href="#tcp-udp" title="Permanent link">&para;</a></h1>
 <h2 id="tcp">TCP 的头部结构<a class="headerlink" href="#tcp" title="Permanent link">&para;</a></h2>
-<p><img alt="TCP的头部结构" src="../Figures/Computer%20Network/TCP头部结构.jpg" /></p>
+<p><img alt="TCP的头部结构" src="../../Figures/Computer%20Network/TCP%E5%A4%B4%E9%83%A8%E7%BB%93%E6%9E%84.jpg" /></p>
 <ul>
 <li><strong>源端口</strong>：16 位，标识报文的返回地址</li>
 <li><strong>目的端口</strong>：16 位，指明接收方计算机上的应用程序接口</li>
@@ -1473,7 +1473,7 @@
     如果再收到重复的 ACK，那么 cwnd 增加 1；如果收到新数据的 ACK 后，把 cwnd 设置为第一步中的 ssthresh 的值，原因是该 ACK 确认了新的数据，说明从 duplicated ACK 时的数据都已收到，该恢复过程已经结束，可以回到恢复之前的状态了，也即再次进入拥塞避免状态</li>
 </ul>
 <h2 id="tcp_2">TCP 的三次握手<a class="headerlink" href="#tcp_2" title="Permanent link">&para;</a></h2>
-<p><img alt="TCP 的三次握手" src="../Figures/Computer%20Network/TCP的三次握手.jpg" /></p>
+<p><img alt="TCP 的三次握手" src="../../Figures/Computer%20Network/TCP%E7%9A%84%E4%B8%89%E6%AC%A1%E6%8F%A1%E6%89%8B.jpg" /></p>
 <ul>
 <li><strong>第一次握手</strong>：SYN = 1; seq = x; 进入 SYN_SENT 状态</li>
 <li><strong>第二次握手</strong>：SYN = 1; ACK = 1; seq = y; ack = x + 1; 进入 SYN_RCVD 状态</li>
@@ -1500,7 +1500,7 @@
 <li><strong>同步双方初始序列号</strong>：为了实现可靠数据传输，TCP 协议的通信双方，都必须维护一个序列号，以标识发送出去的数据包中，哪些是已经被对方收到的。 三次握手的过程即是通信双方相互告知序列号起始值，并确认对方已经收到了序列号起始值的必经步骤。如果只是两次握手，至多只有连接发起方的起始序列号能被确认，另一方选择的序列号则得不到确认</li>
 </ul>
 <h2 id="tcp_6">TCP 的四次挥手？<a class="headerlink" href="#tcp_6" title="Permanent link">&para;</a></h2>
-<p><img alt="TCP 的四次挥手" src="../Figures/Computer%20Network/TCP的四次挥手.jpg" /></p>
+<p><img alt="TCP 的四次挥手" src="../../Figures/Computer%20Network/TCP%E7%9A%84%E5%9B%9B%E6%AC%A1%E6%8C%A5%E6%89%8B.jpg" /></p>
 <ul>
 <li><strong>第一次挥手</strong>：客户端发送释放报文，并停止发送数据，将首部的 FIN 标识位置为 1，序列号 seq = u 发送给服务器，值等于前面已经传送过来的数据的最后一个字节的序号加 1，此时客户端进入 <strong>FIN_WAIT_1</strong> 状态。即便 FIN 报文不携带数据，也要消耗一个序列号</li>
 <li><strong>第二次挥手</strong>：服务器在收到释放报文后，发送确认报文，ACK 标识位置为 1，ack 值为客户端发送的序列号 u + 1，并带上自己的序列号 v，然后服务器进入 <strong>CLOSE_WAIT</strong> 关闭等待状态。这时服务器 TCP 通知高级应用进程：客户端向服务器的连接释放了，进入半关闭状态。但是服务器如果向客户端发送数据，客户端仍然可以接收，这个状态要持续一段时间，也就是 <strong>CLOSE_WAIT</strong> 关闭等待持续的时间。客户端收到服务器的确认请求后，进入 <strong>FIN_WAIT_2</strong> 状态，等待服务器发送释放报文</li>
