@@ -10,6 +10,7 @@ extra_css:
   - https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.css
 
 theme:
+  custom_dir: overrides
   name: material
   # font:
   #   text: Source Sans Pro
