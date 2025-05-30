@@ -24,5 +24,4 @@ jobs:           # 工作流的具体内容
       - run: pip install mkdocs-hr-plugin
       - run: pip install mkdocs-minify-plugin
       - run: pip install mkdocs-glightbox
-      - run: mkdocs gh-deploy --force
       - run: mkdocs gh-deploy --force   # 使用 mkdocs-material 部署 gh-pages 分支
