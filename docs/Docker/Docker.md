@@ -1,3 +1,6 @@
+---
+comments: true
+---
 <h1 align="center">Docker 简明教程</h1>
 
 # Contents

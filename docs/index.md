@@ -1,3 +1,6 @@
+---
+comments: true
+---
 <img src="https://raw.githubusercontent.com/LulietLyan/Internship-Basic/refs/heads/main/docs/Figures/README/line-neon.gif" width=100%>
 
 <div id="user-content-toc">

@@ -1,3 +1,6 @@
+---
+comments: true
+---
 <h1 align="center">MySQL</h1>
 
 # Contents
