@@ -77,44 +77,95 @@ nav:
   - Docker:
     - ./Docker/Docker.md
 
+# markdown_extensions:
+#   - abbr
+#   - admonition
+#   - attr_list
+#   - def_list
+#   - footnotes
+#   - md_in_html
+#   - toc:
+#       permalink: true
+#       title: Content
+#   - tables
+#   - pymdownx.snippets:
+#       auto_append:
+#         - includes/abbr.md
+#   - pymdownx.arithmatex:
+#       generic: true
+#   - pymdownx.betterem
+#   - pymdownx.caret
+#   - pymdownx.mark
+#   - pymdownx.tilde
+#   - pymdownx.critic:
+#       mode: view
+#   - pymdownx.details
+#   - pymdownx.emoji:
+#       # emoji_index: !!python/name:material.extensions.emoji.twemoji
+#       # emoji_generator: !!python/name:material.extensions.emoji.to_svg
+#   - pymdownx.highlight:
+#       # linenums: true
+#   - pymdownx.superfences:
+#       custom_fences:
+#           - name: mermaid
+#             class: mermaid
+#             format: !!python/name:pymdownx.superfences.fence_code_format
+#   - pymdownx.inlinehilite
+#   - pymdownx.keys
+#   - pymdownx.smartsymbols
+#   - pymdownx.tabbed:
+#       alternate_style: true
+#   - pymdownx.tasklist:
+#       custom_checkbox: true
+#   - meta
+
 markdown_extensions:
-  - abbr
-  - admonition
-  - attr_list
+  # - abbr
+  - meta
   - def_list
-  - footnotes
+  - attr_list
+  # - admonition
+  # - footnotes
   - md_in_html
-  - toc:
-      permalink: true
-      title: Content
-  - tables
-  - pymdownx.snippets:
-      auto_append:
-        - includes/abbr.md
-  - pymdownx.arithmatex:
-      generic: true
-  - pymdownx.betterem
-  - pymdownx.caret
+  - sane_lists
+  - admonition
+  - pymdownx.keys
   - pymdownx.mark
   - pymdownx.tilde
-  - pymdownx.critic:
-      mode: view
+  # - pymdownx.caret
+  - pymdownx.critic
+  # - pymdownx.betterem
   - pymdownx.details
-  - pymdownx.emoji:
-      # emoji_index: !!python/name:material.extensions.emoji.twemoji
-      # emoji_generator: !!python/name:material.extensions.emoji.to_svg
-  - pymdownx.highlight:
-      # linenums: true
+  - pymdownx.snippets
+  - pymdownx.magiclink
+  - pymdownx.smartsymbols
+  - pymdownx.superfences
+  - pymdownx.inlinehilite
+  # - markdown.extensions.attr_list
+  - toc:
+      permalink: true
+      slugify: !!python/object/apply:pymdownx.slugs.slugify
+        kwds:
+          case: lower
+      toc_depth: 4  # 将深度从 4 改为 2
   - pymdownx.superfences:
       custom_fences:
-          - name: mermaid
-            class: mermaid
-            format: !!python/name:pymdownx.superfences.fence_code_format
-  - pymdownx.inlinehilite
-  - pymdownx.keys
-  - pymdownx.smartsymbols
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.highlight: # 代码块高亮
+      anchor_linenums: true
+      # linenums: true # 显示行号
+      # auto_title: true # 显示编程语言名称
+      linenums_style: pymdownx-inline
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
   - pymdownx.tabbed:
       alternate_style: true
   - pymdownx.tasklist:
       custom_checkbox: true
-  - meta
+  - pymdownx.arithmatex:
+      generic: true
