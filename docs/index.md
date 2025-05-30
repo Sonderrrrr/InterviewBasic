@@ -1,4 +1,4 @@
-<img src="./Figures/README/line-neon.gif" width=100%>
+<img src="https://raw.githubusercontent.com/LulietLyan/Internship-Basic/refs/heads/main/docs/Figures/README/line-neon.gif" width=100%>
 
 <div id="user-content-toc">
   <ul align="center">
@@ -28,11 +28,11 @@
 </p> 
 
 <p align="center"> 
-<a href="https://github.com/LulietLyan/Internship-Basic"><img src="./Figures/README/SYSU.svg" style="height:60px;" alt="lulietlyan" /></a>
-<a href="https://github.com/LulietLyan/Internship-Basic"><img src="./Figures/README/NSCC-GZ.svg" style="height:60px;" alt="lulietlyan" /></a>
+<a href="https://github.com/LulietLyan/Internship-Basic"><img src="https://raw.githubusercontent.com/LulietLyan/Internship-Basic/bf270a080ccf966d1ea656e13738556d42b688fd/docs/Figures/README/SYSU.svg" style="height:60px;" alt="lulietlyan" /></a>
+<a href="https://github.com/LulietLyan/Internship-Basic"><img src="https://raw.githubusercontent.com/LulietLyan/Internship-Basic/bf270a080ccf966d1ea656e13738556d42b688fd/docs/Figures/README/NSCC-GZ.svg" style="height:60px;" alt="lulietlyan" /></a>
  </p>
 
-<img src="./Figures/README/line-neon.gif" width=100%>
+<img src="https://raw.githubusercontent.com/LulietLyan/Internship-Basic/refs/heads/main/docs/Figures/README/line-neon.gif" width=100%>
 
 **本项目提供 CS 类学科实习所需各类基础知识及相关工具介绍，持续更新中。无论是知识更新还是格式问题都欢迎大家 PR！**
 
@@ -83,4 +83,4 @@
 4. 将修改后的项目**推送**到您 Fork 的仓库中
 5. **Pull Request** 至本仓库等待合并
 
-<img src="./Figures/README/line-neon.gif" width=100%>
+<img src="https://raw.githubusercontent.com/LulietLyan/Internship-Basic/refs/heads/main/docs/Figures/README/line-neon.gif" width=100%>
