@@ -195,7 +195,7 @@ validation:
     unrecognized_links: ignore
 
 nav:
-  - Home Page: index.md
+  - Portal: index.md
   - Computer Network: 
     - Network Model: Computer Network/Intro.md
     - HTTP & HTTPs: Computer Network/HTTP & HTTPs.md
