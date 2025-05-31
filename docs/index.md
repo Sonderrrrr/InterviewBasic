@@ -28,7 +28,7 @@ comments: true
 
 <div class="grid cards" markdown>
 
--   :material-notebook-edit-outline:{ .lg .middle } __SYSU-CS-Basic__
+-  :material-notebook-edit-outline:{ .lg .middle } __SYSU-CS-Basic__
 
     ---
     记录计算机实习所需的基本知识。
@@ -51,7 +51,7 @@ comments: true
 
 <div class="grid cards" markdown>
 
--   :octicons-graph-16:{ .lg .middle } __Statistics__
+-  :octicons-graph-16:{ .lg .middle } __Statistics__
 
     ---
 
@@ -65,7 +65,7 @@ comments: true
     - :material-chart-line: 本站总访问量：<span id="busuanzi_value_site_pv"></span>次  
     - :material-account: 本站访客数：<span id="busuanzi_value_site_uv"></span>人次  
     
--   :material-link:{ .lg .middle } __Link__
+-  :material-link:{ .lg .middle } __Link__
 
     ---
     - :material-star-outline:{ .lg .middle } 本站样式特别鸣谢:

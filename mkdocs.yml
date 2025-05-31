@@ -57,8 +57,8 @@ theme:
       quote: octicons/quote-16
   palette:
     - scheme: default
-      primary: green
-      accent: light-green
+      primary: blue
+      accent: light-blue
       toggle:
         icon: material/brightness-7
         name: Switch to dark mode
@@ -67,8 +67,8 @@ theme:
         icon: material/brightness-4
         name: Switch to light mode
   custom_colors:
-    primary: "#A5D6A7"  # 自定义淡绿色
-    accent: "#C8E6C9"   # 自定义更浅的绿色
+    primary: "#B8F2FA"  # 自定义淡蓝色
+    accent: "#D7F6FA"   # 自定义更浅的蓝色
 
 extra_javascript:
   - javascripts/katex.js
@@ -203,7 +203,12 @@ nav:
     - IP: Computer Network/IP.md
     # - PDF: 
   - Operating System: 
-    - ./Operating System/OperatingSystem.md
+    - System Basic: Operating System/Intro.md
+    - Concurrency:  Operating System/Concurrency.md
+    - Memory:  Operating System/Memory.md
+    - Process & Thread:  Operating System/Process & Thread.md
+    - File System:  Operating System/File System.md
+    - Socket & Server:  Operating System/Socket & Server.md
   # - 数据结构:
   - Database: 
     - MySQL: ./Database/MySQL/MySQL.md
