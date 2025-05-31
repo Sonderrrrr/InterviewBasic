@@ -1,93 +1,119 @@
 ---
+hide:
+    - date
+    - navigation
+    - toc
+home: true
+statistics: true
 comments: true
 ---
-<img src="https://raw.githubusercontent.com/LulietLyan/Internship-Basic/refs/heads/main/docs/Figures/README/line-neon.gif" width=100%>
 
-<div id="user-content-toc">
-  <ul align="center">
-    <h1 style="display: inline-block"><b>SYSU-CS-Basic</b></h1>
-  </ul>
+
+<style>
+    .custom-font {
+    font-size: 58px; /* 默认字体大小为8px */
+    color:rgb(4, 73, 47);
+}
+@media (max-width: 768px) { /* 假设768px及以下为移动端 */
+    .custom-font {
+        font-size: 32px; /* 移动端字体大小为6px */
+    }
+}
+</style>
+
+# ✨ SYSU-CS-Basic
+
+<center><font class="custom-font ml3">「博学 审问 慎思 明辨 笃行」</font></center>
+<script src="https://cdn.statically.io/libs/animejs/2.0.2/anime.min.js"></script>
+
+<div class="grid cards" markdown>
+
+-   :material-notebook-edit-outline:{ .lg .middle } __SYSU-CS-Basic__
+
+    ---
+    记录计算机实习所需的基本知识。
+
+    我们致力于构建简洁高效的计算机基础知识库，为后来者点亮征途。
+
+    <span style="text-align: right; display: block;">Concat me: :material-email: lulietlyan@gmail.com </span>  
+        
+
+</div>
+<style>
+    @media only screen and (max-width: 768px) {
+        .responsive-image {
+            display: none;
+        }
+    }
+</style>
+
+***
+
+<div class="grid cards" markdown>
+
+-   :octicons-graph-16:{ .lg .middle } __Statistics__
+
+    ---
+
+    - :material-file-document-outline: 页面数： **{{pages}}** 
+    - :material-alphabetical: 总字数：**{{words}}**  
+    - :material-code-tags: 代码行数：**{{codes}}**  
+    - :material-image-multiple: 图片数量：**{{images}}**
+    - :material-calendar: 网站创建日期：2025 年 5 月 31 日
+    - :material-timer-outline: 网站运行时间： <span id="web-time"></span> 
+    <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    - :material-chart-line: 本站总访问量：<span id="busuanzi_value_site_pv"></span>次  
+    - :material-account: 本站访客数：<span id="busuanzi_value_site_uv"></span>人次  
+    
+-   :material-link:{ .lg .middle } __Link__
+
+    ---
+    - :material-star-outline:{ .lg .middle } 本站样式特别鸣谢:
+        - [dearrongerr](https://dearrongerr.github.io/Rongerr.github.io/)
+    - :material-link-variant:{ .lg .middle } [更多友链](./logs/4_flink.md)
+    - :material-update:{ .lg .middle } [最近更新](./logs/2_updatelog.md)
+    - :material-comment-text-multiple:{ .lg .middle } [留言板](./logs/6_waline.md)
 </div>
 
-<p align="center"> 
-  <img src="https://img.shields.io/github/followers/LulietLyan?label=Followers&style=for-the-badge&color=purple"
-  alt="github follow" >
-  <img src="https://img.shields.io/github/stars/LulietLyan/Internship-Basic?label=Stars&style=for-the-badge"
-  alt="github repo stars" >
-  <img src="https://img.shields.io/github/contributors/LulietLyan/README-Template?style=for-the-badge&logoColor=%23985684"
-  alt="contributors" >
-  <img src="https://img.shields.io/github/issues-pr/LulietLyan/README-Template?style=for-the-badge&color=%23985684"
-  alt="issues-pr" >
-  <img src="https://img.shields.io/github/issues/LulietLyan/README-Template?style=for-the-badge&color=%23777777" 
-  alt="issues" >
-  <img src="https://img.shields.io/github/forks/LulietLyan/README-Template?style=for-the-badge&color=%23187777" 
-  alt="forks" >
-  <img src="https://img.shields.io/badge/Contributions-Welcome-%23028745?style=for-the-badge&labelColor=%23b08f42"
-  alt="contribution"/>
-  <img src="https://img.shields.io/badge/Star-IfYouLike-%23067897?style=for-the-badge&labelColor=%23879078"
-  alt="star"/>
-  <img src="https://img.shields.io/github/license/Ileriayo/markdown-badges?style=for-the-badge"
-  alt="license" >
-</p> 
-
-<p align="center"> 
-<a href="https://github.com/LulietLyan/Internship-Basic"><img src="https://raw.githubusercontent.com/LulietLyan/Internship-Basic/bf270a080ccf966d1ea656e13738556d42b688fd/docs/Figures/README/SYSU.svg" style="height:60px;" alt="lulietlyan" /></a>
-<a href="https://github.com/LulietLyan/Internship-Basic"><img src="https://raw.githubusercontent.com/LulietLyan/Internship-Basic/bf270a080ccf966d1ea656e13738556d42b688fd/docs/Figures/README/NSCC-GZ.svg" style="height:60px;" alt="lulietlyan" /></a>
- </p>
-
-<img src="https://raw.githubusercontent.com/LulietLyan/Internship-Basic/refs/heads/main/docs/Figures/README/line-neon.gif" width=100%>
 
 
-<div class="admonition abstract">
-  <p class="admonition-title"><b>「博学 审问 慎思 明辨 笃行」</b></p>
-  <p> 我们致力于构建简洁高效的计算机基础知识库，为后来者点亮征途。</p>
-</div>
 
-# Contents
-- [Contents](#contents)
-- [Computer Network ](#computer-network-)
-- [Operating System ](#operating-system-)
-- [MySQL ](#mysql-)
-- [Redis ](#redis-)
-- [Docker ](#docker-)
-- [GO 项目实战 ](#go-项目实战-)
-- [🤝 代码贡献](#-代码贡献)
+<style>
+.md-grid {
+  max-width: 1220px;
+}
+</style>
+<style>
+body {
+  position: relative; /* 确保 body 元素的 position 属性为非静态值 */
+}
 
+body::before {
+  --size: 35px; /* 调整网格单元大小 */
+  --line: color-mix(in hsl, canvasText, transparent 80%); /* 调整线条透明度 */
+  content: '';
+  height: 100vh;
+  width: 100%;
+  position: absolute; /* 修改为 absolute 以使其随页面滚动 */
+  background: linear-gradient(
+        90deg,
+        var(--line) 1px,
+        transparent 1px var(--size)
+      )
+      50% 50% / var(--size) var(--size),
+    linear-gradient(var(--line) 1px, transparent 1px var(--size)) 50% 50% /
+      var(--size) var(--size);
+  -webkit-mask: linear-gradient(-20deg, transparent 50%, white);
+          mask: linear-gradient(-20deg, transparent 50%, white);
+  top: 0;
+  transform-style: flat;
+  pointer-events: none;
+  z-index: -1;
+}
 
-# Computer Network ![Socket.io](https://img.shields.io/badge/Socket.io-black?style=for-the-badge&logo=socket.io&badgeColor=010101)
-
-- [计算机网络面试基础知识](./Computer%20Network/ComputerNetwork.md)
-
-# Operating System ![Linux](https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black)
-
-- [操作系统面试基础知识](./Operating%20System/OperatingSystem.md)
-
-
-# MySQL ![MySQL](https://img.shields.io/badge/mysql-4479A1.svg?style=for-the-badge&logo=mysql&logoColor=white)
-
-- [MySQL 面试基础知识](./Database/MySQL/MySQL.md)
-
-# Redis ![Redis](https://img.shields.io/badge/redis-%23DD0031.svg?style=for-the-badge&logo=redis&logoColor=white)
-
-- [MySQL 面试基础知识](./Database/Redis/Redis.md)
-
-# Docker ![Docker](https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white)
-
-- [Docker 简明教程](./Docker/Docker.md)
-
-
-# GO 项目实战 ![Go](https://img.shields.io/badge/go-%2300ADD8.svg?style=for-the-badge&logo=go&logoColor=white)
-
-- **Preparing...**
-
-# 🤝 代码贡献
-
-诚挚邀请志同道合的朋友们为本仓库贡献更多内容！若您希望贡献资料：
-
-1. **Fork** 本仓库
-2. 在本地拉取您 Fork 的仓库
-3. **本地创建新的分支**并进行修改
-4. 将修改后的项目**推送**到您 Fork 的仓库中
-5. **Pull Request** 至本仓库等待合并
-
-<img src="https://raw.githubusercontent.com/LulietLyan/Internship-Basic/refs/heads/main/docs/Figures/README/line-neon.gif" width=100%>
+@media (max-width: 768px) {
+  body::before {
+    display: none; /* 在手机端隐藏网格效果 */
+  }
+}
+</style>

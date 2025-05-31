@@ -2,20 +2,15 @@ site_name: SYSU-CS-Basic
 site_description: 博学 审问 慎思 明辨 笃行
 site_url: https://lulietlyan.github.io/Internship-Basic
 repo_url: https://github.com/LulietLyan/Internship-Basic
-# repo_name: SYSU-CS-Basic      # 右上角的名字
-edit_uri: edit/main/docs/     # 编辑按钮的url
-
-extra_css:
-  - stylesheets/basic.css
-  - stylesheets/admonition.css
-  - https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.css
+repo_name: SYSU-CS-Basic      # 右上角的名字
+edit_uri: https://github.com/LulietLyan/Internship-Basic/edit/main/docs     # 编辑按钮的url
 
 theme:
-  custom_dir: overrides
   name: material
-  # font:
-  #   text: Source Sans Pro
-  #   code: Source Code Pro
+  custom_dir: overrides
+  font:
+    text: LXGW WenKai Screen GB Screen # Share Tech
+    code: JetBrains Mono
   features: 
     - navigation.tabs.sticky
     - navigation.sections
@@ -40,8 +35,9 @@ theme:
     - toc.follow    
     - header.autohide
   language: zh              # 一些提示性的文字会变成中文
+  favicon: Figures/README/SYSU.svg
   icon:
-    logo: material/leaf
+    logo: material/library
     repo: fontawesome/brands/github
     previous: fontawesome/solid/angle-left
     # top: fontawesome/solid/angles-up
@@ -59,24 +55,57 @@ theme:
       bug: octicons/bug-16
       example: octicons/beaker-16
       quote: octicons/quote-16
-
   palette:
-    - media: "(prefers-color-scheme: light)"
-      scheme: default # 日间模式
+    - scheme: default
+      primary: green
+      accent: light-green
       toggle:
-        icon: material/weather-sunny
+        icon: material/brightness-7
         name: Switch to dark mode
-      primary: white
-      accent: pink
-
-    # Palette toggle for dark mode
-    - media: "(prefers-color-scheme: dark)"
-      scheme: slate
+    - scheme: slate
       toggle:
-        icon: material/weather-night
+        icon: material/brightness-4
         name: Switch to light mode
-      primary: blue grey
-      accent: pink
+  custom_colors:
+    primary: "#A5D6A7"  # 自定义淡绿色
+    accent: "#C8E6C9"   # 自定义更浅的绿色
+
+extra_javascript:
+  - javascripts/katex.js
+  - javascripts/mathjax.js
+  - https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.0/es5/tex-mml-chtml.js
+  - https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.0/es5/tex-chtml.js
+  - https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.0/es5/tex-chtml-full.js
+  - https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.0/es5/tex-svg-full.js
+  - javascripts/tablesort.js
+  - javascripts/toc.js
+  - https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js
+  - https://polyfill.io/v3/polyfill.min.js?features=es6
+  - javascripts/katex.js
+  - https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/katex.min.js
+  - https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/contrib/auto-render.min.js
+  - javascripts/web-time.js
+  - https://cdn.jsdelivr.net/gh/Wcowin/Wcowin.github.io@main/docs/javascripts/extra.js
+  - https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js
+
+extra_css:
+  - stylesheets/basic.css
+  - stylesheets/admonition.css
+  - https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.css
+  - https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/katex.min.css
+  - stylesheets/no-footer.css
+  - stylesheets/unordered-list-symbols.css
+  - stylesheets/cards.css
+  - stylesheets/flink.css
+  - stylesheets/rounded_corner.css
+  - https://gcore.jsdelivr.net/npm/lxgw-wenkai-screen-webfont@1.1.0/style.css
+  - https://gcore.jsdelivr.net/npm/lxgw-wenkai-webfont@1.1.0/style.css
+  - https://cdn.tonycrane.cc/jbmono/jetbrainsmono.css
+  - https://cdn.tonycrane.cc/lxgw/lxgwscreen.css
+  - stylesheets/custom.css
+  - stylesheets/tasklist.css
+  - stylesheets/fold_toc.css
+  - stylesheets/changelog_extra.css
 
 extra:
   social: # icons
@@ -86,6 +115,25 @@ extra:
     - icon: material/email
       link: mailto:<lulietlyan@gmail.com>
       name: Email | LulietLyan
+
+plugins:
+  - search
+  - mermaid2
+  - changelog
+  - callouts
+  - glightbox:
+      width: 80%
+  - mkdocs-jupyter
+  - statistics:
+      words_per_minute: 200
+  - hr
+  - tags
+  # - toc
+  - document-dates:
+      type: datetime
+      locale: zh
+      exclude:
+        - index.md
 
 markdown_extensions:
   - abbr
@@ -158,96 +206,3 @@ nav:
     - Redis: ./Database/Redis/Redis.md
   - Docker:
     - ./Docker/Docker.md
-
-# markdown_extensions:
-#   - abbr
-#   - admonition
-#   - attr_list
-#   - def_list
-#   - footnotes
-#   - md_in_html
-#   - toc:
-#       permalink: true
-#       title: Content
-#   - tables
-#   - pymdownx.snippets:
-#       auto_append:
-#         - includes/abbr.md
-#   - pymdownx.arithmatex:
-#       generic: true
-#   - pymdownx.betterem
-#   - pymdownx.caret
-#   - pymdownx.mark
-#   - pymdownx.tilde
-#   - pymdownx.critic:
-#       mode: view
-#   - pymdownx.details
-#   - pymdownx.emoji:
-#       # emoji_index: !!python/name:material.extensions.emoji.twemoji
-#       # emoji_generator: !!python/name:material.extensions.emoji.to_svg
-#   - pymdownx.highlight:
-#       # linenums: true
-#   - pymdownx.superfences:
-#       custom_fences:
-#           - name: mermaid
-#             class: mermaid
-#             format: !!python/name:pymdownx.superfences.fence_code_format
-#   - pymdownx.inlinehilite
-#   - pymdownx.keys
-#   - pymdownx.smartsymbols
-#   - pymdownx.tabbed:
-#       alternate_style: true
-#   - pymdownx.tasklist:
-#       custom_checkbox: true
-#   - meta
-
-# markdown_extensions:
-#   - abbr
-#   - meta
-#   - def_list
-#   - attr_list
-#   - admonition
-#   - footnotes
-#   - md_in_html
-#   - sane_lists
-#   - admonition
-#   - pymdownx.keys
-#   - pymdownx.mark
-#   - pymdownx.tilde
-#   # - pymdownx.caret
-#   - pymdownx.critic
-#   # - pymdownx.betterem
-#   - pymdownx.details
-#   - pymdownx.snippets
-#   - pymdownx.magiclink
-#   - pymdownx.smartsymbols
-#   - pymdownx.superfences
-#   - pymdownx.inlinehilite
-#   - markdown.extensions.attr_list
-#   - toc:
-#       permalink: true
-#       slugify: !!python/object/apply:pymdownx.slugs.slugify
-#         kwds:
-#           case: lower
-#       toc_depth: 4  # 将深度从 4 改为 2
-#   - pymdownx.superfences:
-#       custom_fences:
-#         - name: mermaid
-#           class: mermaid
-#           format: !!python/name:pymdownx.superfences.fence_code_format
-#   - pymdownx.highlight: # 代码块高亮
-#       anchor_linenums: true
-#       # linenums: true # 显示行号
-#       # auto_title: true # 显示编程语言名称
-#       linenums_style: pymdownx-inline
-#       line_spans: __span
-#       pygments_lang_class: true
-#   - pymdownx.emoji:
-#       emoji_index: !!python/name:material.extensions.emoji.twemoji
-#       emoji_generator: !!python/name:material.extensions.emoji.to_svg
-#   - pymdownx.tabbed:
-#       alternate_style: true
-#   - pymdownx.tasklist:
-#       custom_checkbox: true
-#   - pymdownx.arithmatex:
-#       generic: true
