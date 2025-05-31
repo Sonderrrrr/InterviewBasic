@@ -185,6 +185,8 @@ HTTP3 基于 UDP 协议在应用层实现了 QUIC 协议，具有类似 TCP 的 
 
 ## QUIC 如何保证可靠传输？
 
+QUIC 协议中 Packet 包含 QUIC Frame，QUIC Frame 包含 HTTP3 Frame。
+
 - **Packet Header**：分为 Long Packet Header 用于首次建立连接和 Short Packet Header 用于日常传输数据。QUIC 也是需要三次握手来建立连接的，目的是为了协商连接 ID。协商出连接 ID 后，后续传输时，双方只需要固定住连接 ID，从而实现连接迁移功能。Short Packet Header 中的 Packet Number 每个报文有独一无二的编号，并且严格递增。单调递增的设计，可以让数据包不再像 TCP 那样必须有序确认，当数据包 Packet N 丢失后，只要有新的已接收数据包确认，当前窗口就会继续向右滑动，从而解决了队头阻塞的问题
 - **QUIC Frame Header**：一个 Packet 报文中可以存放多个 QUIC Frame。用于传输的 Stream Frame 有 Stream ID、Offset 和 length 字段，Stream ID 用于多个并发传输的 HTTP 消息，通过不同的 Stream ID 加以区别、Offset 字段类似于 TCP 协议中的 Seq 序号，保证数据的顺序性和可靠性；Length 标识了 Frame 数据的长度。如果发生丢包了进行重传，通过比较两个数据包的 Stream ID 与 Stream Offset，如果都是一致，就说明这两个数据包的内容一致
 
