@@ -1035,7 +1035,7 @@ Redis 在启动的时候，会启动后台线程(BIO)：
 <ul>
 <li><strong>点赞</strong>：key 是文章 id，value 是用户 id</li>
 <li><strong>共同关注</strong>：Set 类型支持交集运算，所以可以用来计算共同关注的好友、公众号等。key 可以是用户 id，value 则是已关注的公众号的 id</li>
-<li><strong>抽奖活动</strong>：存储某活动中中奖的用户名 ，Set 类型因为有去重功能，可以保证同一个用户不会中奖两次</li>
+<li><strong>抽奖活动</strong>：存储某活动中中奖的用户名，Set 类型因为有去重功能，可以保证同一个用户不会中奖两次</li>
 </ul>
 <blockquote>
 <p><strong>提示</strong>
@@ -1091,7 +1091,7 @@ Set 的差集、并集和交集的计算复杂度较高，在数据量较大的�
 <blockquote>
 <p><strong>tip 渐进式哈希的触发条件？</strong>
 负载因子 = 哈希表已保存节点数/哈希表大小</p>
-<p>当负载因子大于等于 1 ，没有执行 RDB 快照或没有进行 AOF 重写的时候，就会进行 rehash 操作。</p>
+<p>当负载因子大于等于 1，没有执行 RDB 快照或没有进行 AOF 重写的时候，就会进行 rehash 操作。</p>
 <p>当负载因子大于等于 5 时，此时说明哈希冲突非常严重了，不管有没有有在执行 RDB 快照或 AOF 重写，都会强制进行 rehash 操作。</p>
 </blockquote>
 <h3 id="_8">跳表<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h3>
@@ -1272,7 +1272,7 @@ Set 的差集、并集和交集的计算复杂度较高，在数据量较大的�
 <h2 id="_23">如何保证删除缓存操作一定能成功？<a class="headerlink" href="#_23" title="Permanent link">&para;</a></h2>
 <ul>
 <li><strong>重试机制</strong>：引入消息队列，删除缓存的操作由消费者来做，删除失败的话重新去消息队列拉取相应的操作，超过一定次数没有删除成功就像业务层报错</li>
-<li>*<em>订阅 BINLog *</em>：订阅 binlog 日志，拿到具体要操作的数据，然后再执行缓存删除。可以让删除服务模拟自己伪装成一个 MySQL 的从节点，向 MySQL 主节点发送 dump 请求，主节点收到请求后，就会开始推送 BINLog ，删除服务解析 BINLog 字节流之后，转换为便于读取的结构化数据，再进行删除</li>
+<li>*<em>订阅 BINLog *</em>：订阅 binlog 日志，拿到具体要操作的数据，然后再执行缓存删除。可以让删除服务模拟自己伪装成一个 MySQL 的从节点，向 MySQL 主节点发送 dump 请求，主节点收到请求后，就会开始推送 BINLog，删除服务解析 BINLog 字节流之后，转换为便于读取的结构化数据，再进行删除</li>
 </ul>
 <h2 id="_24">业务一致性要求高怎么办？<a class="headerlink" href="#_24" title="Permanent link">&para;</a></h2>
 <ul>

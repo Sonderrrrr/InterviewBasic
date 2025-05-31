@@ -1087,10 +1087,10 @@
 <h2 id="mvcc">MVCC 实现原理？<a class="headerlink" href="#mvcc" title="Permanent link">&para;</a></h2>
 <p><strong>Read View</strong> 有四个重要的字段：</p>
 <ul>
-<li><strong>m_ids</strong> ：指的是在创建 Read View 时，当前数据库中活跃事务的事务 id 列表，活跃事务指的就是，启动了但还没提交的事务</li>
-<li><strong>min_trx_id</strong> ：指的是在创建 Read View 时，当前数据库中活跃事务中事务 id 最小的事务，也就是 m_ids 的最小值</li>
-<li><strong>max_trx_id</strong> ：创建 Read View 时当前数据库中应该给下一个事务的 id 值，也就是全局事务中最大的事务 id 值 + 1</li>
-<li><strong>creator_trx_id</strong> ：指的是创建该 Read View 的事务的事务 id</li>
+<li><strong>m_ids</strong>：指的是在创建 Read View 时，当前数据库中活跃事务的事务 id 列表，活跃事务指的就是，启动了但还没提交的事务</li>
+<li><strong>min_trx_id</strong>：指的是在创建 Read View 时，当前数据库中活跃事务中事务 id 最小的事务，也就是 m_ids 的最小值</li>
+<li><strong>max_trx_id</strong>：创建 Read View 时当前数据库中应该给下一个事务的 id 值，也就是全局事务中最大的事务 id 值 + 1</li>
+<li><strong>creator_trx_id</strong>：指的是创建该 Read View 的事务的事务 id</li>
 </ul>
 <p>对于使用 InnoDB 存储引擎的数据库表，它的聚簇索引记录中都包含下面两个隐藏列：</p>
 <ul>
@@ -1506,7 +1506,7 @@ redo log + WAL 技术，InnoDB 就可以保证即使数据库发生异常重启�
 <h2 id="_38">两阶段提交的过程是怎样的？<a class="headerlink" href="#_38" title="Permanent link">&para;</a></h2>
 <p>在 MySQL 的 InnoDB 存储引擎中，开启 binlog 的情况下，MySQL 会同时维护 binlog 日志与 InnoDB 的 redo log，为了保证这两个日志的一致性，MySQL 使用了内部 XA 事务，内部 XA 事务由 binlog 作为协调者，存储引擎是参与者。</p>
 <p>当客户端执行 commit 语句或者在自动提交的情况下，MySQL 内部开启一个 XA 事务，分两阶段来完成 XA 事务的提交。</p>
-<p>事务的提交过程有两个阶段，将 redo log 的写入拆成了两个步骤：prepare 和 commit，中间再穿插写入 binlog ：</p>
+<p>事务的提交过程有两个阶段，将 redo log 的写入拆成了两个步骤：prepare 和 commit，中间再穿插写入 binlog：</p>
 <ul>
 <li><strong>prepare 阶段</strong>：将 内部 XA 事务的  ID 写入到 redo log，同时将 redo log 对应的事务状态设置为 prepare，然后将 redo log 持久化到硬盘。</li>
 <li><strong>commit 阶段</strong>：把 内部 XA 事务的  ID 写入到 binlog，然后将 binlog 持久化到硬盘，接着调用引擎的提交事务接口，将 redo log 状态设置为 commit，此时该状态并不需要持久化到硬盘，只需要 write 到文件系统的 page cache 成功，只要 binlog 写硬盘成功，redo log 的状态还是 prepare 也没有关系，一样会被认为事务已经执行成功</li>
