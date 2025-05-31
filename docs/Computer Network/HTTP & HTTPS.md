@@ -3,6 +3,41 @@ statistics: true
 comments: true
 ---
 
+<style>
+body {
+  position: relative; /* 确保 body 元素的 position 属性为非静态值 */
+}
+
+body::before {
+  --size: 35px; /* 调整网格单元大小 */
+  --line: color-mix(in hsl, canvasText, transparent 80%); /* 调整线条透明度 */
+  content: '';
+  height: 100vh;
+  width: 100%;
+  position: absolute; /* 修改为 absolute 以使其随页面滚动 */
+  background: linear-gradient(
+        90deg,
+        var(--line) 1px,
+        transparent 1px var(--size)
+      )
+      50% 50% / var(--size) var(--size),
+    linear-gradient(var(--line) 1px, transparent 1px var(--size)) 50% 50% /
+      var(--size) var(--size);
+  -webkit-mask: linear-gradient(-20deg, transparent 50%, white);
+          mask: linear-gradient(-20deg, transparent 50%, white);
+  top: 0;
+  transform-style: flat;
+  pointer-events: none;
+  z-index: -1;
+}
+
+@media (max-width: 768px) {
+  body::before {
+    display: none; /* 在手机端隐藏网格效果 */
+  }
+}
+</style>
+
 # 🟡 HTTP & HTTPs
 
 ## HTTP 状态码的含义？
@@ -339,7 +374,7 @@ HTTPs 是 **计算密集型**，所以应从优化 CPU 入手。可以选择支�
 
 ### 会话复用
 
-会话服用使用的以下三种技术都有不能避免 **重放攻击**：
+会话复用使用的以下三种技术都有不能避免 **重放攻击**：
 
 - **Session ID**：客户端和服务端首次 TLS 握手连接后，双方在内存缓存会话密钥，并用唯一的 Session ID 进行标识。当客户端再次连接时，Hello 报文中会携带 Session ID，只要 ID 没有过期就可以通过 1 RTT 实现握手
 - **Session Ticket**：服务器不再缓存每个客户端的会话密钥，转而将缓存工作交给客户端。客户端与服务器首次连接时服务器加密会话密钥作为 Ticket 发送给客户端，客户端缓存该 Ticket。客户端再次连接服务器时发送该 Ticket，服务器解码 Ticket 并检查有效期即可恢复通话

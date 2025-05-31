@@ -70,19 +70,17 @@ comments: true
     ---
     - :material-star-outline:{ .lg .middle } 本站样式特别鸣谢:
         - [dearrongerr](https://dearrongerr.github.io/Rongerr.github.io/)
-    - :material-link-variant:{ .lg .middle } [更多友链](./logs/4_flink.md)
+    - :material-link-variant:{ .lg .middle } [友链](./logs/4_flink.md)
     - :material-update:{ .lg .middle } [最近更新](./logs/2_updatelog.md)
     - :material-comment-text-multiple:{ .lg .middle } [留言板](./logs/6_waline.md)
 </div>
-
-
-
 
 <style>
 .md-grid {
   max-width: 1220px;
 }
 </style>
+
 <style>
 body {
   position: relative; /* 确保 body 元素的 position 属性为非静态值 */
