@@ -42,7 +42,7 @@ body::before {
 
 ## TCP 的头部结构
 
-![TCP的头部结构](../Figures/Computer%20Network/TCP头部结构.jpg)
+![TCP的头部结构](../Figures/Computer%20Network/TCP头部结构.svg)
 
 - **源端口**：16 位，标识报文的返回地址
 - **目的端口**：16 位，指明接收方计算机上的应用程序接口
