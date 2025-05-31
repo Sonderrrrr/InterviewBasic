@@ -1,4 +1,4 @@
-# 🟡 HTTP & HTTPs
+# 🟡 HTTP & HTTPS
 
 ## HTTP 状态码的含义？
 
