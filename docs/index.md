@@ -60,10 +60,10 @@ comments: true
     - :material-code-tags: 代码行数： **{{codes}}**   
     - :material-image-multiple: 图片数量： **{{images}}** 
     - :material-calendar: 网站创建日期：2025 年 5 月 31 日
+    <script defer src="https://events.vercount.one/js"></script>
     - :material-timer-outline: 网站运行时间： <span id="web-time"></span> 
-    <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-    - :material-chart-line: 本站总访问量：<span id="busuanzi_value_site_pv"></span>次  
-    - :material-account: 本站访客数：<span id="busuanzi_value_site_uv"></span>人次  
+    - :material-chart-line: 本站总访问量：<span id="vercount_value_site_pv"></span>次  
+    - :material-account: 本站访客数：<span id="vercount_value_site_uv"></span>人次  
     
 -  :material-link:{ .lg .middle } __Link__
 
