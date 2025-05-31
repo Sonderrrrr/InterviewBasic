@@ -55,10 +55,10 @@ comments: true
 
     ---
 
-    - :material-file-document-outline: 页面数： **{{pages}}** 
-    - :material-alphabetical: 总字数：**{{words}}**  
-    - :material-code-tags: 代码行数：**{{codes}}**  
-    - :material-image-multiple: 图片数量：**{{images}}**
+    - :material-file-document-outline: 页面数：  **{{pages}}**  
+    - :material-alphabetical: 总字数： **{{words}}**   
+    - :material-code-tags: 代码行数： **{{codes}}**   
+    - :material-image-multiple: 图片数量： **{{images}}** 
     - :material-calendar: 网站创建日期：2025 年 5 月 31 日
     - :material-timer-outline: 网站运行时间： <span id="web-time"></span> 
     <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
