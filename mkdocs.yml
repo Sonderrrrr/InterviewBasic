@@ -195,14 +195,14 @@ validation:
     unrecognized_links: ignore
 
 nav:
-  - Portal: index.md
-  - Computer Network: 
+  - 🔯 Portal: index.md
+  - 🕸 Computer Network: 
     - Network Model: Computer Network/Intro.md
     - HTTP & HTTPs: Computer Network/HTTP & HTTPs.md
     - TCP & UDP: Computer Network/TCP & UDP.md
     - IP: Computer Network/IP.md
     # - PDF: 
-  - Operating System: 
+  - 💻 Operating System: 
     - System Basic: Operating System/Intro.md
     - Concurrency:  Operating System/Concurrency.md
     - Memory:  Operating System/Memory.md
@@ -210,8 +210,8 @@ nav:
     - File System:  Operating System/File System.md
     - Socket & Server:  Operating System/Socket & Server.md
   # - 数据结构:
-  - Database: 
+  - 📕 Database: 
     - MySQL: ./Database/MySQL/MySQL.md
     - Redis: ./Database/Redis/Redis.md
-  - Docker:
+  - 🎒 Docker:
     - ./Docker/Docker.md
