@@ -197,7 +197,11 @@ validation:
 nav:
   - Home Page: index.md
   - Computer Network: 
-    - ./Computer Network/ComputerNetwork.md
+    - Network Model: Network/Intro.md
+    - HTTP & HTTPs: Network/HTTP & HTTPs.md
+    - TCP & UDP: Network/TCP & UDP.md
+    - IP: Network/IP.md
+    # - PDF: 
   - Operating System: 
     - ./Operating System/OperatingSystem.md
   # - 数据结构:
