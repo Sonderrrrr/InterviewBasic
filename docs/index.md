@@ -31,9 +31,11 @@ comments: true
 -  :material-notebook-edit-outline:{ .lg .middle } __SYSU-CS-Basic__
 
     ---
-    记录计算机实习所需的基本知识。
+    ⚡ 还能再「快」一点。
 
-    我们致力于构建简洁高效的计算机基础知识库，为后来者点亮征途。
+    ——现阶段准备实习要面对成堆的资料，或许这对平时沉迷其他事务的我们是一座难以跨越的高山 🏔。啰里吧嗦的学习资料能直接灌进脑海吗❓
+
+    因此，我们致力于构建简洁高效的计算机基础知识库，为后来者点亮征途。
 
     <span style="text-align: right; display: block;">Concat me: :material-email: lulietlyan@gmail.com </span>  
         
