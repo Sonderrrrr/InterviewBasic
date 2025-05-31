@@ -198,7 +198,7 @@ nav:
   - Home Page: index.md
   - Computer Network: 
     - Network Model: Computer Network/Intro.md
-    - HTTP & HTTPS: Computer Network/HTTP & HTTPS.md
+    - HTTP & HTTPs: Computer Network/HTTP & HTTPs.md
     - TCP & UDP: Computer Network/TCP & UDP.md
     - IP: Computer Network/IP.md
     # - PDF: 
