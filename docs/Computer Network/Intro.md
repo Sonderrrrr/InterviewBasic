@@ -1,3 +1,13 @@
+---
+hide:
+    - date
+    - navigation
+    - toc
+home: true
+statistics: true
+comments: true
+---
+
 # 🟣 计算机网络模型
 
 ## OSI 的 7 层网络模型？

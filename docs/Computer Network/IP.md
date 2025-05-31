@@ -1,3 +1,13 @@
+---
+hide:
+    - date
+    - navigation
+    - toc
+home: true
+statistics: true
+comments: true
+---
+
 # 🟢 IP
 
 ## DNS 查询服务器的基本流程？

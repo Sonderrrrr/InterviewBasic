@@ -1,3 +1,13 @@
+---
+hide:
+    - date
+    - navigation
+    - toc
+home: true
+statistics: true
+comments: true
+---
+
 # 🟡 HTTP & HTTPS
 
 ## HTTP 状态码的含义？

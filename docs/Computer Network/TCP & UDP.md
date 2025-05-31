@@ -1,3 +1,13 @@
+---
+hide:
+    - date
+    - navigation
+    - toc
+home: true
+statistics: true
+comments: true
+---
+
 # 🔴 TCP & UDP
 
 ## TCP 的头部结构
