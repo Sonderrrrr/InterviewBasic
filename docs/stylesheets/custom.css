@@ -123,7 +123,8 @@
   /* 本站主题色 */
   
   [data-md-color-scheme="default"] {
-    --md-primary-fg-color: #d9eddf; 
+    /* 顶部颜色 */
+    --md-primary-fg-color: #dbdcff; 
     /* --md-primary-fg-color: #efefef; */
     --md-primary-bg-color: #000000;
     --md-typeset-a-color: #555555;
