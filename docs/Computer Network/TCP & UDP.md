@@ -1,9 +1,4 @@
 ---
-hide:
-    - date
-    - navigation
-    - toc
-home: true
 statistics: true
 comments: true
 ---
