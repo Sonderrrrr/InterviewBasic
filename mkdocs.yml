@@ -215,3 +215,5 @@ nav:
     - Redis: ./Database/Redis/Redis.md
   - 🎒 Docker:
     - ./Docker/Docker.md
+  - 💡 Algorithm:
+    - ./Algorithm/Template.md
