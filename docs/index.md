@@ -34,11 +34,15 @@ comments: true
     ⚡ 还能再「快」一点
 
     求职重担，如临高山🏔
+
     资料繁冗、琐碎，令人却步💢
-    沉迷过琐碎日常是💭
-    我们都被迫快速上手，快速掌握，快速出发🤗
+
+    我们沉迷过琐碎日常💭
+
+    也都被迫快速上手，快速掌握，快速出发🤗
 
     我们致力于搭建一座精炼高效的知识库🏫
+
     愿它成为后来者的明灯💡
 
     <span style="text-align: right; display: block;">Concat me: :material-email: lulietlyan@gmail.com </span>  
