@@ -91,7 +91,7 @@ TCP 是 **面向连接的、可靠的、基于字节流** 的传输层通信协�
 
 ## TCP 的三次握手
 
-![TCP 的三次握手](../Figures/Computer%20Network/TCP的三次握手.jpg)
+![TCP 的三次握手](../Figures/Computer%20Network/TCP的三次握手.svg)
 
 - **第一次握手**：SYN = 1; seq = x; 进入 SYN_SENT 状态
 - **第二次握手**：SYN = 1; ACK = 1; seq = y; ack = x + 1; 进入 SYN_RCVD 状态
