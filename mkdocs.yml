@@ -218,3 +218,27 @@ nav:
   - 💡 Algorithm:
     - 关于算法题: ./Algorithm/Template.md
     - LeetCode Hot100: ./Algorithm/LeetCode Hot100.md
+  - ✏ Design Pattern:
+    - 单例模式: ./DesignPattern/1-单例模式.md
+    - 工厂方法模式: ./DesignPattern/2-工厂方法模式.md
+    - 抽象工厂模式: ./DesignPattern/3-抽象工厂模式.md
+    - 建造者模式: ./DesignPattern/4-建造者模式.md
+    - 原型模式: ./DesignPattern/5-原型模式.md
+    - 适配器模式: ./DesignPattern/6-适配器模式.md
+    - 代理模式: ./DesignPattern/7-代理模式.md
+    - 装饰模式: ./DesignPattern/8-装饰模式.md
+    - 外观模式: ./DesignPattern/9-外观模式.md
+    - 桥接模式: ./DesignPattern/10-桥接模式.md
+    - 组合模式: ./DesignPattern/11-组合模式.md
+    - 享元模式: ./DesignPattern/12-享元模式.md
+    - 观察者模式: ./DesignPattern/13-观察者模式.md
+    - 策略模式: ./DesignPattern/14-策略模式.md
+    - 命令模式: ./DesignPattern/15-命令模式.md
+    - 中介者模式: ./DesignPattern/16-中介者模式.md
+    - 备忘录模式: ./DesignPattern/17-备忘录模式.md
+    - 模板方法模式: ./DesignPattern/18-模板方法模式.md
+    - 迭代器模式: ./DesignPattern/19-迭代器模式.md
+    - 状态模式: ./DesignPattern/20-状态模式.md
+    - 责任链模式: ./DesignPattern/21-责任链模式.md
+    - 解释器模式: ./DesignPattern/22-解释器模式.md
+    - 访问者模式: ./DesignPattern/23-访问者模式.md

@@ -3,6 +3,10 @@
   #     - function: 
   #         text: 本站不再更新,跳转查看最新动态
   #         href: https://dearrongerr.github.io/
+  - "2025-06-02":
+    - pageupdate: 添加设计模式
+  - "2025-06-02":
+    - pageupdate: 添加算法专栏
   - "2025-06-01":
     - pageupdate: 修复次级列表缩进问题
   - "2025-05-31":
