@@ -38,7 +38,9 @@ body::before {
 }
 </style>
 
-# 常用的头文件
+# 关于算法题
+
+## 常用的头文件
 
 ```C++
 #include <iostream>         // 重要
@@ -76,11 +78,11 @@ body::before {
 #include <valarray>
 ```
 
-# ACM 模式的 Hot100 如何处理输入输出？
+## ACM 模式的 Hot100 如何处理输入输出？
 
 这里主要是链表以及二叉树很烦
 
-## ListNode 链表
+### ListNode 链表
 
 ```C++
 #include <iostream>
@@ -126,7 +128,7 @@ int main() {
 }
 ```
 
-## TreeNode 二叉树
+### TreeNode 二叉树
 
 ```C++
 #include <iostream>

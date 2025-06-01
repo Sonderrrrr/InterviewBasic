@@ -216,4 +216,4 @@ nav:
   - 🎒 Docker:
     - ./Docker/Docker.md
   - 💡 Algorithm:
-    - ./Algorithm/Template.md
+    - 关于算法题: ./Algorithm/Template.md
