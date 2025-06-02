@@ -130,7 +130,7 @@ Linux 计算 RTO 需要采样 **加权平均 RTT 时间** 以及 **RTT 波动范
 
 ### D-SACK
 
-Duplicate SACK 又称 `D-SACK`，其主要**使用了 SACK 来告诉「发送方」有哪些数据被重复接收了。**
+Duplicate SACK 又称 `D-SACK`，其主要 **使用 SACK 来告诉「发送方」有哪些数据被重复接收**。
 
 `D-SACK` 的主要作用有：
 
